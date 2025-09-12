@@ -4,15 +4,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/src/output.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="/src/style.css"> -->
+    <!-- <link href="/src/output.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="/src/output.css">
     <title>Document</title>
 </head>
 
 <body>
-<main class="bg-amber-100">
-    <header class="max-w-10/12 m-auto"></header>
-</main>
+    <main class="bg-amber-100">
+        <header class="border-b-1 sticky">
+            <div class="max-w-10/12 m-auto flex items-center justify-between py-4 ">
+                <div class="text-4xl font-bold">TEXT</div>
+
+                <!-- Desktop Nav -->
+                <nav class="max-lg:hidden">
+                    <ul class="flex text-2xl gap-6">
+                        <li
+                            class="px-4 py-2 cursor-pointer hover:bg-yellow-500 border border-transparent hover:border-black hover:rounded-md hover:shadow-[3px_3px_0_0_black]">
+                            Project</li>
+                        <li
+                            class="px-4 py-2 cursor-pointer hover:bg-yellow-500 border border-transparent hover:border-black hover:rounded-md hover:shadow-[3px_3px_0_0_black]">
+                            Service</li>
+                        <li
+                            class="px-4 py-2 cursor-pointer hover:bg-yellow-500 border border-transparent hover:border-black hover:rounded-md hover:shadow-[3px_3px_0_0_black]">
+                            Client</li>
+                        <li
+                            class="px-4 py-2 cursor-pointer hover:bg-yellow-500 border border-transparent hover:border-black hover:rounded-md hover:shadow-[3px_3px_0_0_black]">
+                            Blog</li>
+                        <li
+                            class="px-4 py-2 cursor-pointer hover:bg-yellow-500 border border-transparent hover:border-black hover:rounded-md hover:shadow-[3px_3px_0_0_black]">
+                            Contact Us</li>
+                    </ul>
+                </nav>
+
+                <!-- Hamburger Button -->
+                <button id="menu-btn" class="lg:hidden flex flex-col justify-between w-8 h-6 group">
+                    <span
+                        class="block h-1 w-full bg-black rounded transition-all duration-300 group-[.open]:rotate-50 group-[.open]:translate-y-3"></span>
+                    <span
+                        class="block h-1 w-full bg-black rounded transition-all duration-300 group-[.open]:opacity-0"></span>
+                    <span
+                        class="block h-1 w-full bg-black rounded transition-all duration-300 group-[.open]:-rotate-50 group-[.open]:-translate-y-2"></span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Mobile Menu -->
+        <nav id="mobile-menu"
+            class="lg:hidden max-h-0 w-full z-10 absolute overflow-hidden transition-all duration-500 ease-in-out bg-amber-100">
+            <ul class="flex flex-col gap-4 text-xl p-6">
+                <li class="px-4 py-2 hover:bg-yellow-500 border border-black rounded-md shadow-[3px_3px_0_0_black]">
+                    Project</li>
+                <li class="px-4 py-2 hover:bg-yellow-500 border border-black rounded-md shadow-[3px_3px_0_0_black]">
+                    Service</li>
+                <li class="px-4 py-2 hover:bg-yellow-500 border border-black rounded-md shadow-[3px_3px_0_0_black]">
+                    Client</li>
+                <li class="px-4 py-2 hover:bg-yellow-500 border border-black rounded-md shadow-[3px_3px_0_0_black]">Blog
+                </li>
+                <li class="px-4 py-2 hover:bg-yellow-500 border border-black rounded-md shadow-[3px_3px_0_0_black]">
+                    Contact Us</li>
+            </ul>
+        </nav>
+        <section class="border-b-1">
+            <div class="max-w-10/12 m-auto flex justify-around items-center gap-8 py-10 max-md:flex-col max-md:gap-12">
+                <figure class="relative w-1/2 max-md:w-full">
+                    <img class="w-full"
+                        src="https://demo1.crthemes.com/adinda/wp-content/uploads/sites/4/2024/10/bg_avatar.png"
+                        alt="profile">
+                    <div
+                        class="p-4 w-fit absolute top-1/12 left-0 bg-blue-400 border border-black rounded-md shadow-[3px_3px_0_0_black] flex flex-col justify-center items-center gap-2">
+                        <svg class="max-w-10 max-lg:max-w-6 max-sm:max-w-3" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                            <path
+                                d="M372.2 116C372.2 136.9 359.8 155 342 163.2L448 256L552.4 235.1C547.1 227.4 544 218 544 208C544 181.5 565.5 160 592 160C618.5 160 640 181.5 640 208C640 234 619.4 255.1 593.6 256L481 506.3C470.7 529.3 447.8 544 422.6 544L217.4 544C192.2 544 169.4 529.2 159 506.3L46.4 256C20.6 255.1 0 234 0 208C0 181.5 21.5 160 48 160C74.5 160 96 181.5 96 208C96 218.1 92.9 227.4 87.6 235.1L192 256L298.1 163.1C280.4 154.8 268.1 136.8 268.1 116C268.1 87.3 291.4 64 320.1 64C348.8 64 372.1 87.3 372.1 116z" />
+                        </svg>
+                        <span class="text-2xl max-lg:text-[16px] max-sm:text-[14px]">small text here</span>
+                    </div>
+                    <div
+                        class="p-4 w-fit absolute top-6/12 right-0 bg-green-400 border border-black rounded-md shadow-[3px_3px_0_0_black] flex flex-col justify-center items-center gap-2">
+                        <svg class="max-w-10 max-lg:max-w-6 max-sm:max-w-3" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                            <path
+                                d="M372.2 116C372.2 136.9 359.8 155 342 163.2L448 256L552.4 235.1C547.1 227.4 544 218 544 208C544 181.5 565.5 160 592 160C618.5 160 640 181.5 640 208C640 234 619.4 255.1 593.6 256L481 506.3C470.7 529.3 447.8 544 422.6 544L217.4 544C192.2 544 169.4 529.2 159 506.3L46.4 256C20.6 255.1 0 234 0 208C0 181.5 21.5 160 48 160C74.5 160 96 181.5 96 208C96 218.1 92.9 227.4 87.6 235.1L192 256L298.1 163.1C280.4 154.8 268.1 136.8 268.1 116C268.1 87.3 291.4 64 320.1 64C348.8 64 372.1 87.3 372.1 116z" />
+                        </svg>
+                        <span class="text-2xl max-lg:text-[16px] max-sm:text-[14px]">small text here</span>
+                    </div>
+                    <div
+                        class="p-4 w-fit absolute bottom-0 left-2/12 bg-red-600 border border-black rounded-md shadow-[3px_3px_0_0_black] flex flex-col justify-center items-center gap-2">
+                        <svg class="max-w-10 max-lg:max-w-6 max-sm:max-w-3" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                            <path
+                                d="M372.2 116C372.2 136.9 359.8 155 342 163.2L448 256L552.4 235.1C547.1 227.4 544 218 544 208C544 181.5 565.5 160 592 160C618.5 160 640 181.5 640 208C640 234 619.4 255.1 593.6 256L481 506.3C470.7 529.3 447.8 544 422.6 544L217.4 544C192.2 544 169.4 529.2 159 506.3L46.4 256C20.6 255.1 0 234 0 208C0 181.5 21.5 160 48 160C74.5 160 96 181.5 96 208C96 218.1 92.9 227.4 87.6 235.1L192 256L298.1 163.1C280.4 154.8 268.1 136.8 268.1 116C268.1 87.3 291.4 64 320.1 64C348.8 64 372.1 87.3 372.1 116z" />
+                        </svg>
+                        <span class="text-2xl max-lg:text-[16px] max-sm:text-[14px]">small text here</span>
+                    </div>
+                </figure>
+                <div class="w-1/2 max-md:w-full">
+                    <h1 class="text-6xl font-bold max-xl:text-4xl text-left max-sm:text-3xl">
+                        I am <span id="typing" class="border-r-4 border-black pr-1"></span>
+                    </h1>
+                    <p class="text-2xl max-xl:text-2xl text-left max-sm:text-[18px]">
+                        Paragraph goes here. Write anything here...
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuBtn.addEventListener("click", () => {
+            menuBtn.classList.toggle("open");
+            if (mobileMenu.classList.contains("max-h-0")) {
+                mobileMenu.classList.remove("max-h-0");
+                mobileMenu.classList.add("max-h-screen");
+            } else {
+                mobileMenu.classList.add("max-h-0");
+                mobileMenu.classList.remove("max-h-screen");
+            }
+        });
+
+
+        const phrases = ["Bob", "Developer", "Designer"];
+        const typingElement = document.getElementById("typing");
+
+        let phraseIndex = 0;
+        let letterIndex = 0;
+        let currentPhrase = [];
+        let isDeleting = false;
+        let isEnd = false;
+
+        function loop() {
+            isEnd = false;
+            typingElement.innerHTML = currentPhrase.join("");
+
+            if (phraseIndex < phrases.length) {
+                if (!isDeleting && letterIndex <= phrases[phraseIndex].length) {
+                    currentPhrase.push(phrases[phraseIndex][letterIndex]);
+                    letterIndex++;
+                    typingElement.innerHTML = currentPhrase.join("");
+                }
+
+                if (isDeleting && letterIndex <= phrases[phraseIndex].length) {
+                    currentPhrase.pop();
+                    letterIndex--;
+                    typingElement.innerHTML = currentPhrase.join("");
+                }
+
+                if (letterIndex === phrases[phraseIndex].length) {
+                    isEnd = true;
+                    isDeleting = true;
+                }
+
+                if (isDeleting && letterIndex === 0) {
+                    currentPhrase = [];
+                    isDeleting = false;
+                    phraseIndex++;
+                    if (phraseIndex === phrases.length) {
+                        phraseIndex = 0;
+                    }
+                }
+            }
+
+            const typingSpeed = isEnd ? 2000 : isDeleting ? 100 : 150;
+            setTimeout(loop, typingSpeed);
+        }
+
+        loop();
+    </script>
 </body>
 
 </html>
