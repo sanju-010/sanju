@@ -5,38 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.ico    " />
+    <!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="src/style.css">
     <!-- <link href="/src/output.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="src/output.css">
-    <title>Document</title>
+    <title>Name</title>
 </head>
 
 <body>
     <main class="bg-amber-100">
-        <header class="border-b-1 sticky">
+        <header class="border-b-1 fixed top-0 left-0 w-full bg-amber-100 z-50">
             <div class="max-w-10/12 m-auto flex items-center justify-between py-4 ">
                 <div class="text-4xl font-bold">TEXT</div>
 
                 <!-- Desktop Nav -->
                 <nav class="max-lg:hidden">
                     <ul class="flex text-2xl gap-6">
-                        <li
-                            class="px-4 py-2 cursor-pointer hover:bg-yellow-500 border border-transparent hover:border-black hover:rounded-md hover:shadow-[3px_3px_0_0_black]">
-                            Project</li>
-                        <li
-                            class="px-4 py-2 cursor-pointer hover:bg-yellow-500 border border-transparent hover:border-black hover:rounded-md hover:shadow-[3px_3px_0_0_black]">
-                            Service</li>
-                        <li
-                            class="px-4 py-2 cursor-pointer hover:bg-yellow-500 border border-transparent hover:border-black hover:rounded-md hover:shadow-[3px_3px_0_0_black]">
-                            Client</li>
-                        <li
-                            class="px-4 py-2 cursor-pointer hover:bg-yellow-500 border border-transparent hover:border-black hover:rounded-md hover:shadow-[3px_3px_0_0_black]">
-                            Blog</li>
-                        <li
-                            class="px-4 py-2 cursor-pointer hover:bg-yellow-500 border border-transparent hover:border-black hover:rounded-md hover:shadow-[3px_3px_0_0_black]">
-                            Contact Us</li>
+                        <li>
+                            <a href="#about"
+                                class="nav-link px-4 py-2 cursor-pointer hover:bg-yellow-500 border border-transparent hover:border-black hover:rounded-md hover:shadow-[3px_3px_0_0_black]">
+                                About Me
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#resume"
+                                class="nav-link px-4 py-2 cursor-pointer hover:bg-yellow-500 border border-transparent hover:border-black hover:rounded-md hover:shadow-[3px_3px_0_0_black]">
+                                Resume
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact"
+                                class="nav-link px-4 py-2 cursor-pointer hover:bg-yellow-500 border border-transparent hover:border-black hover:rounded-md hover:shadow-[3px_3px_0_0_black]">
+                                Contact
+                            </a>
+                        </li>
                     </ul>
                 </nav>
+
 
                 <!-- Hamburger Button -->
                 <button id="menu-btn" class="lg:hidden flex flex-col justify-between w-8 h-6 group">
@@ -48,30 +55,40 @@
                         class="block h-1 w-full bg-black rounded transition-all duration-300 group-[.open]:-rotate-50 group-[.open]:-translate-y-2"></span>
                 </button>
             </div>
+            <!-- Mobile Menu (INSIDE header now) -->
+  <nav id="mobile-menu"
+    class="lg:hidden max-h-0 w-full overflow-hidden transition-all duration-500 ease-in-out bg-amber-100">
+    <ul class="flex flex-col gap-4 text-xl p-6">
+      <li><a href="#about" class="mobile-link block px-4 py-2 hover:bg-yellow-500 border border-black rounded-md shadow-[3px_3px_0_0_black]">About</a></li>
+      <li><a href="#resume" class="mobile-link block px-4 py-2 hover:bg-yellow-500 border border-black rounded-md shadow-[3px_3px_0_0_black]">Resume</a></li>
+      <li><a href="#contact" class="mobile-link block px-4 py-2 hover:bg-yellow-500 border border-black rounded-md shadow-[3px_3px_0_0_black]">Contact</a></li>
+      <li><a href="Resume/sample.pdf" download 
+       class="block bg-green-400 px-4 py-2 border border-black rounded-md shadow-[3px_3px_0_0_black] hover:bg-green-500 transition font-semibold">
+      Get My Resume
+    </a></li>
+    </ul>
+  </nav>
         </header>
 
         <!-- Mobile Menu -->
-        <nav id="mobile-menu"
-            class="lg:hidden max-h-0 w-full z-10 absolute overflow-hidden transition-all duration-500 ease-in-out bg-amber-100">
-            <ul class="flex flex-col gap-4 text-xl p-6">
-                <li class="px-4 py-2 hover:bg-yellow-500 border border-black rounded-md shadow-[3px_3px_0_0_black]">
-                    Project</li>
-                <li class="px-4 py-2 hover:bg-yellow-500 border border-black rounded-md shadow-[3px_3px_0_0_black]">
-                    Service</li>
-                <li class="px-4 py-2 hover:bg-yellow-500 border border-black rounded-md shadow-[3px_3px_0_0_black]">
-                    Client</li>
-                <li class="px-4 py-2 hover:bg-yellow-500 border border-black rounded-md shadow-[3px_3px_0_0_black]">Blog
-                </li>
-                <li class="px-4 py-2 hover:bg-yellow-500 border border-black rounded-md shadow-[3px_3px_0_0_black]">
-                    Contact Us</li>
-            </ul>
-        </nav>
-        <section class="border-b-1">
+<!-- <nav id="mobile-menu"
+    class="lg:hidden max-h-0 w-full absolute top-16 left-0 overflow-hidden transition-all duration-500 ease-in-out bg-amber-100 z-40">
+    <ul class="flex flex-col gap-4 text-xl p-6">
+        <li><a href="#about" class="block px-4 py-2 hover:bg-yellow-500 border border-black rounded-md shadow-[3px_3px_0_0_black]">About</a></li>
+        <li><a href="#resume" class="block px-4 py-2 hover:bg-yellow-500 border border-black rounded-md shadow-[3px_3px_0_0_black]">Resume</a></li>
+        <li><a href="#contact" class="block px-4 py-2 hover:bg-yellow-500 border border-black rounded-md shadow-[3px_3px_0_0_black]">Contact</a></li>
+    </ul>
+</nav> -->
+
+
+        <!-- about section -->
+        <section id="about" class="border-b-1 pt-20">
             <div class="max-w-10/12 m-auto flex justify-around items-center gap-8 py-10 max-md:flex-col max-md:gap-12">
                 <figure class="relative w-1/2 max-md:w-full">
-                    <img class="w-full"
+                    <!-- <img class="w-full"
                         src="https://demo1.crthemes.com/adinda/wp-content/uploads/sites/4/2024/10/bg_avatar.png"
-                        alt="profile">
+                        alt="profile"> -->
+                    <img class="w-full" src="images/bg_avatar.webp" alt="profile">
                     <div
                         class="p-4 max-sm:p-2 w-fit absolute top-1/12 left-0 bg-blue-400 border border-black rounded-md shadow-[3px_3px_0_0_black] flex flex-col justify-center items-center gap-2 max-lg:gap-1 animate-float">
                         <svg class="max-w-6 max-lg:max-w-4 max-sm:max-w-3" xmlns="http://www.w3.org/2000/svg"
@@ -111,141 +128,148 @@
             </div>
         </section>
 
-
-        <section class="max-w-6xl mx-auto px-6 py-16">
-            <!-- Heading -->
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold mb-4">My <span
-                        class="bg-yellow-400 px-2 shadow-[3px_3px_0_0_black]">Resume</span></h2>
-                <p class="text-gray-600">The services we provide</p>
-            </div>
-
-            <div class="grid lg:grid-cols-2 gap-12">
-                <!-- Left Column -->
-                <div class="space-y-12">
-                    <!-- Skills -->
-                    <div>
-                        <button
-                            class="bg-white border border-black px-4 py-1 rounded-md shadow-[3px_3px_0_0_black] mb-6">Skill</button>
-                        <div class="space-y-6">
-                            <!-- Skill Item -->
-                            <div>
-                                <div class="flex justify-between text-sm font-semibold mb-1">
-                                    <span>Photoshop</span>
-                                    <span>60%</span>
-                                </div>
-                                <div class="w-full bg-gray-200 rounded-full h-3 border border-black overflow-hidden">
-                                    <div class="bg-yellow-500 h-3 w-[60%]"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between text-sm font-semibold mb-1">
-                                    <span>Wordpress</span>
-                                    <span>90%</span>
-                                </div>
-                                <div class="w-full bg-gray-200 rounded-full h-3 border border-black overflow-hidden">
-                                    <div class="bg-yellow-500 h-3 w-[90%]"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between text-sm font-semibold mb-1">
-                                    <span>ReactJS</span>
-                                    <span>70%</span>
-                                </div>
-                                <div class="w-full bg-gray-200 rounded-full h-3 border border-black overflow-hidden">
-                                    <div class="bg-yellow-500 h-3 w-[70%]"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between text-sm font-semibold mb-1">
-                                    <span>System Admin</span>
-                                    <span>50%</span>
-                                </div>
-                                <div class="w-full bg-gray-200 rounded-full h-3 border border-black overflow-hidden">
-                                    <div class="bg-yellow-500 h-3 w-[50%]"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between text-sm font-semibold mb-1">
-                                    <span>Jquery</span>
-                                    <span>80%</span>
-                                </div>
-                                <div class="w-full bg-gray-200 rounded-full h-3 border border-black overflow-hidden">
-                                    <div class="bg-yellow-500 h-3 w-[80%]"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Experience -->
-                    <div>
-                        <button
-                            class="bg-yellow-400 border border-black px-4 py-1 rounded-md shadow-[3px_3px_0_0_black] mb-6">Experience</button>
-                        <div class="space-y-6">
-                            <div>
-                                <p class="font-semibold">2014 - Present</p>
-                                <p class="font-bold">Soft Tech Inc. - Senior UX Designer</p>
-                                <p class="text-gray-600">Euisumod vel bibendum ultricies, fringilla vel eros, donec
-                                    euismod leo lectus.</p>
-                            </div>
-                            <div>
-                                <p class="font-semibold">2012 - 2014</p>
-                                <p class="font-bold">Soft Tech Inc. - Senior UX Designer</p>
-                                <p class="text-gray-600">Euisumod vel bibendum ultricies, fringilla vel eros, donec
-                                    euismod leo lectus.</p>
-                            </div>
-                            <div>
-                                <p class="font-semibold">2014 - 2018</p>
-                                <p class="font-bold">Soft Tech Inc. - Senior UX Designer</p>
-                                <p class="text-gray-600">Euisumod vel bibendum ultricies, fringilla vel eros, donec
-                                    euismod leo lectus.</p>
-                            </div>
-                        </div>
-                    </div>
+        <!-- resume section -->
+        <section id="resume" class="border-b-1 scroll-mt-20">
+            <div class="max-w-10/12 mx-auto py-10">
+                <!-- Heading -->
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold mb-4">My <span
+                            class="bg-yellow-400 px-2 shadow-[3px_3px_0_0_black]">Resume</span></h2>
+                    <p class="text-gray-600">The services we provide</p>
                 </div>
 
-                <!-- Right Column -->
-                <div class="space-y-12">
-                    <!-- Education -->
-                    <div>
-                        <button
-                            class="bg-blue-400 border border-black px-4 py-1 rounded-md shadow-[3px_3px_0_0_black] mb-6">Education</button>
-                        <div class="space-y-6">
-                            <div>
-                                <p class="font-semibold">2010 - 2012</p>
-                                <p class="font-bold">Masters in Interaction Design</p>
-                                <p class="text-gray-600">University of North Texas, Denton, TX</p>
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- Left Column -->
+                    <div class="space-y-12">
+                        <!-- Skills -->
+                        <div>
+                            <button
+                                class="bg-amber-500 border border-black px-4 py-1 rounded-md shadow-[3px_3px_0_0_black] mb-6">Skill</button>
+                            <div class="space-y-6">
+                                <!-- Skill Item -->
+                                <div>
+                                    <div class="flex justify-between text-sm font-semibold mb-1">
+                                        <span>Photoshop</span>
+                                        <span>60%</span>
+                                    </div>
+                                    <div
+                                        class="w-full bg-gray-200 rounded-full h-3 border border-black overflow-hidden">
+                                        <div class="bg-yellow-500 h-3 w-[60%]"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-sm font-semibold mb-1">
+                                        <span>Wordpress</span>
+                                        <span>90%</span>
+                                    </div>
+                                    <div
+                                        class="w-full bg-gray-200 rounded-full h-3 border border-black overflow-hidden">
+                                        <div class="bg-yellow-500 h-3 w-[90%]"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-sm font-semibold mb-1">
+                                        <span>ReactJS</span>
+                                        <span>70%</span>
+                                    </div>
+                                    <div
+                                        class="w-full bg-gray-200 rounded-full h-3 border border-black overflow-hidden">
+                                        <div class="bg-yellow-500 h-3 w-[70%]"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-sm font-semibold mb-1">
+                                        <span>System Admin</span>
+                                        <span>50%</span>
+                                    </div>
+                                    <div
+                                        class="w-full bg-gray-200 rounded-full h-3 border border-black overflow-hidden">
+                                        <div class="bg-yellow-500 h-3 w-[50%]"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-sm font-semibold mb-1">
+                                        <span>Jquery</span>
+                                        <span>80%</span>
+                                    </div>
+                                    <div
+                                        class="w-full bg-gray-200 rounded-full h-3 border border-black overflow-hidden">
+                                        <div class="bg-yellow-500 h-3 w-[80%]"></div>
+                                    </div>
+                                </div>
                             </div>
-                            <div>
-                                <p class="font-semibold">2006 - 2009</p>
-                                <p class="font-bold">Masters in Interaction Design</p>
-                                <p class="text-gray-600">University of North Texas, Denton, TX</p>
+                        </div>
+
+                        <!-- Experience -->
+                        <div>
+                            <button
+                                class="bg-yellow-400 border border-black px-4 py-1 rounded-md shadow-[3px_3px_0_0_black] mb-6">Experience</button>
+                            <div class="space-y-6">
+                                <div>
+                                    <p class="font-semibold">2014 - Present</p>
+                                    <p class="font-bold">Soft Tech Inc. - Senior UX Designer</p>
+                                    <p class="text-gray-600">Euisumod vel bibendum ultricies, fringilla vel eros, donec
+                                        euismod leo lectus.</p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">2012 - 2014</p>
+                                    <p class="font-bold">Soft Tech Inc. - Senior UX Designer</p>
+                                    <p class="text-gray-600">Euisumod vel bibendum ultricies, fringilla vel eros, donec
+                                        euismod leo lectus.</p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">2014 - 2018</p>
+                                    <p class="font-bold">Soft Tech Inc. - Senior UX Designer</p>
+                                    <p class="text-gray-600">Euisumod vel bibendum ultricies, fringilla vel eros, donec
+                                        euismod leo lectus.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Awards -->
-                    <div>
-                        <button
-                            class="bg-green-400 border border-black px-4 py-1 rounded-md shadow-[3px_3px_0_0_black] mb-6">Awards</button>
-                        <div class="space-y-6">
-                            <div>
-                                <p class="font-semibold">06 - 2019</p>
-                                <p class="font-bold">Year of the Month</p>
-                                <p class="text-gray-600">Euisumod vel bibendum ultricies, fringilla vel eros, donec
-                                    euismod leo lectus.</p>
+                    <!-- Right Column -->
+                    <div class="space-y-12">
+                        <!-- Education -->
+                        <div>
+                            <button
+                                class="bg-blue-400 border border-black px-4 py-1 rounded-md shadow-[3px_3px_0_0_black] mb-6">Education</button>
+                            <div class="space-y-6">
+                                <div>
+                                    <p class="font-semibold">2010 - 2012</p>
+                                    <p class="font-bold">Masters in Interaction Design</p>
+                                    <p class="text-gray-600">University of North Texas, Denton, TX</p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">2006 - 2009</p>
+                                    <p class="font-bold">Masters in Interaction Design</p>
+                                    <p class="text-gray-600">University of North Texas, Denton, TX</p>
+                                </div>
                             </div>
-                            <div>
-                                <p class="font-semibold">03 - 2021</p>
-                                <p class="font-bold">Year of the Month</p>
-                                <p class="text-gray-600">Euisumod vel bibendum ultricies, fringilla vel eros, donec
-                                    euismod leo lectus.</p>
-                            </div>
-                            <div>
-                                <p class="font-semibold">06 - 2023</p>
-                                <p class="font-bold">Year of the Month</p>
-                                <p class="text-gray-600">Euisumod vel bibendum ultricies, fringilla vel eros, donec
-                                    euismod leo lectus.</p>
+                        </div>
+
+                        <!-- Awards -->
+                        <div>
+                            <button
+                                class="bg-green-400 border border-black px-4 py-1 rounded-md shadow-[3px_3px_0_0_black] mb-6">Awards</button>
+                            <div class="space-y-6">
+                                <div>
+                                    <p class="font-semibold">06 - 2019</p>
+                                    <p class="font-bold">Year of the Month</p>
+                                    <p class="text-gray-600">Euisumod vel bibendum ultricies, fringilla vel eros, donec
+                                        euismod leo lectus.</p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">03 - 2021</p>
+                                    <p class="font-bold">Year of the Month</p>
+                                    <p class="text-gray-600">Euisumod vel bibendum ultricies, fringilla vel eros, donec
+                                        euismod leo lectus.</p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">06 - 2023</p>
+                                    <p class="font-bold">Year of the Month</p>
+                                    <p class="text-gray-600">Euisumod vel bibendum ultricies, fringilla vel eros, donec
+                                        euismod leo lectus.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -253,10 +277,101 @@
             </div>
         </section>
 
+       <!-- Contact Section -->
+<section id="contact" class="relative border-b-1 scroll-mt-20">
+  <!-- Snake Game Background -->
+<canvas id="snakeCanvas" class="absolute max-sm:hidden inset-0 w-full h-full"></canvas>
+
+  <!-- Foreground Contact Form -->
+  <div class="relative lg:max-w-4/12 max-w-10/12 mx-auto py-10 z-10">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold mb-2">Get in <span
+          class="bg-green-400 px-1 shadow-[3px_3px_0_0_black]">Touch</span></h2>
+      <p class="text-gray-600">I would love to hear from you</p>
+    </div>
+    <form action="#" class="space-y-6">
+      <!-- Row 1: Name + Email -->
+      <div class="sm:flex sm:flex-row gap-6">
+        <div class="flex flex-col w-1/2 max-sm:w-full max-sm:mb-6">
+          <label for="name" class="font-semibold mb-2">Name</label>
+          <input type="text" id="name" placeholder="Enter your name"
+            class="p-3 border border-black rounded-md shadow-[3px_3px_0_0_black] focus:outline-none">
+        </div>
+        <div class="flex flex-col w-1/2 max-sm:w-full">
+          <label for="email" class="font-semibold mb-2">Email</label>
+          <input type="email" id="email" placeholder="Enter your email"
+            class="p-3 border border-black rounded-md shadow-[3px_3px_0_0_black] focus:outline-none">
+        </div>
+      </div>
+
+      <!-- Row 2: Message -->
+      <div class="flex flex-col">
+        <label for="message" class="font-semibold mb-2">Message</label>
+        <textarea id="message" rows="5" placeholder="Write your message here..."
+          class="p-3 border border-black rounded-md shadow-[3px_3px_0_0_black] focus:outline-none"></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="text-center">
+        <button type="submit"
+          class="bg-green-400 font-semibold px-6 py-3 shadow-[3px_3px_0_0_black] hover:bg-green-500 transition">
+          Send Message
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+        <footer class="border-t-1 bg-amber-100 py-8">
+  <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+    
+    <!-- Left: Name / Branding -->
+    <div class="text-2xl font-bold">Your Name</div>
+
+    <!-- Center: Quick Links -->
+    <ul class="flex max-sm:flex-col max-sm:items-center gap-6 text-lg">
+      <li><a href="#about" class="hover:text-green-600">About</a></li>
+      <li><a href="#resume" class="hover:text-green-600">Resume</a></li>
+      <li><a href="#contact" class="hover:text-green-600">Contact</a></li>
+      <li>
+    <a href="Resume/sample.pdf" download 
+       class="bg-green-400 px-4 py-2 border border-black rounded-md shadow-[3px_3px_0_0_black] hover:bg-green-500 transition font-semibold">
+      Get My Resume
+    </a>
+  </li>
+    </ul>
+
+    <!-- Right: Social Icons -->
+    <!-- Right: Social Icons -->
+<div class="flex gap-4 text-2xl">
+  <a href="https://instagram.com/yourusername" target="_blank" 
+     class="w-12 h-12 flex items-center justify-center border border-black rounded-md shadow-[3px_3px_0_0_black] hover:bg-red-600 hover:text-white transition">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+  <a href="https://linkedin.com/in/yourusername" target="_blank" 
+     class="w-12 h-12 flex items-center justify-center border border-black rounded-md shadow-[3px_3px_0_0_black] hover:bg-blue-600 hover:text-white transition">
+    <i class="fa-brands fa-linkedin"></i>
+  </a>
+  <a href="https://github.com/yourusername" target="_blank" 
+     class="w-12 h-12 flex items-center justify-center border border-black rounded-md shadow-[3px_3px_0_0_black] hover:bg-gray-900 hover:text-white transition">
+    <i class="fa-brands fa-github"></i>
+  </a>
+</div>
+
+  </div>
+
+
+</footer>
+
 
     </main>
 
     <script src="src/script.js"></script>
+<script src="src/snake.js"></script>
+
+
+
 </body>
 
 </html>
