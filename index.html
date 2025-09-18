@@ -539,45 +539,54 @@
                             class="bg-green-400 px-1 shadow-[3px_3px_0_0_black]">Touch</span></h2>
                     <p class="text-gray-600">I would love to hear from you</p>
                 </div>
-              <form id="contactForm" action="https://formsubmit.co/sanjuworkmail459@gmail.com" method="POST" class="space-y-6">
-  <!-- Honeypot to reduce spam -->
-  <input type="text" name="_honey" style="display:none">
 
-  <!-- Row 1: Name + Email -->
-  <div class="sm:flex sm:flex-row gap-6">
-    <!-- Name -->
-    <div class="flex flex-col w-1/2 max-sm:w-full max-sm:mb-6 relative">
-      <label for="name" class="font-semibold mb-2">Name</label>
-      <input type="text" id="name" name="name" placeholder="Enter your name"
-             class="p-3 border border-black rounded-md shadow-[3px_3px_0_0_black] focus:outline-none focus:ring-2 focus:ring-green-400 transition">
-      <small id="nameError" class="text-red-500 text-sm mt-1 hidden">Name is required</small>
-    </div>
+                <form id="contactForm" action="https://formspree.io/f/xdklrrny" method="POST" class="space-y-6">
+                    <!-- Honeypot to reduce spam -->
+                    <input type="text" name="_honey" style="display:none">
 
-    <!-- Email -->
-    <div class="flex flex-col w-1/2 max-sm:w-full relative">
-      <label for="email" class="font-semibold mb-2">Email</label>
-      <input type="email" id="email" name="email" placeholder="Enter your email"
-             class="p-3 border border-black rounded-md shadow-[3px_3px_0_0_black] focus:outline-none focus:ring-2 focus:ring-green-400 transition">
-      <small id="emailError" class="text-red-500 text-sm mt-1 hidden">A valid email is required</small>
-    </div>
-  </div>
+                    <!-- Disable default captcha -->
+                    <input type="hidden" name="_captcha" value="false">
 
-  <!-- Row 2: Message -->
-  <div class="flex flex-col relative">
-    <label for="message" class="font-semibold mb-2">Message</label>
-    <textarea id="message" name="message" rows="5" placeholder="Write your message here..."
-              class="p-3 border border-black rounded-md shadow-[3px_3px_0_0_black] focus:outline-none focus:ring-2 focus:ring-green-400 transition"></textarea>
-    <small id="messageError" class="text-red-500 text-sm mt-1 hidden">Message is required</small>
-  </div>
+                    <!-- Row 1: Name + Email -->
+                    <div class="sm:flex sm:flex-row gap-6">
+                        <!-- Name -->
+                        <div class="flex flex-col w-1/2 max-sm:w-full max-sm:mb-6 relative">
+                            <label for="name" class="font-semibold mb-2">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required
+                                class="p-3 border border-black rounded-md shadow-[3px_3px_0_0_black] focus:outline-none focus:ring-2 focus:ring-green-400 transition">
+                            <small id="nameError" class="text-red-500 text-sm mt-1 hidden">Name is required</small>
+                        </div>
 
-  <!-- Submit Button -->
-  <div class="text-center">
-    <button type="submit" id="submitBtn"
-            class="bg-green-400 font-semibold px-6 py-3 shadow-[3px_3px_0_0_black] hover:bg-green-500 transition disabled:opacity-60 disabled:cursor-not-allowed">
-      Send Message
-    </button>
-  </div>
-</form>
+                        <!-- Email -->
+                        <div class="flex flex-col w-1/2 max-sm:w-full relative">
+                            <label for="email" class="font-semibold mb-2">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required
+                                class="p-3 border border-black rounded-md shadow-[3px_3px_0_0_black] focus:outline-none focus:ring-2 focus:ring-green-400 transition">
+                            <small id="emailError" class="text-red-500 text-sm mt-1 hidden">A valid email is
+                                required</small>
+                        </div>
+                    </div>
+
+                    <!-- Row 2: Message -->
+                    <div class="flex flex-col relative">
+                        <label for="message" class="font-semibold mb-2">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required
+                            class="p-3 border border-black rounded-md shadow-[3px_3px_0_0_black] focus:outline-none focus:ring-2 focus:ring-green-400 transition"></textarea>
+                        <small id="messageError" class="text-red-500 text-sm mt-1 hidden">Message is required</small>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="text-center">
+                        <button type="submit" id="submitBtn"
+                            class="bg-green-400 font-semibold px-6 py-3 shadow-[3px_3px_0_0_black] hover:bg-green-500 transition disabled:opacity-60 disabled:cursor-not-allowed">
+                            Send Message
+                        </button>
+                        <p id="successMsg" class="mt-3 text-green-600 font-medium hidden">
+                            🎉 Thanks! Your message was sent successfully.
+                        </p>
+                    </div>
+                </form>
+
             </div>
         </section>
 
@@ -623,69 +632,17 @@
 
 
         </footer>
+        <!-- Go to Top Button -->
+        <button id="goTopBtn" class="fixed bottom-6 right-6 bg-white border border-black z-50
+               shadow-[3px_3px_0_0_black] rounded-md max-sm:w-8 max-sm:h-8 w-12 h-12 text-2xl hover:cursor-pointer hover:bg-yellow-400 hidden">
+            ⬆
+        </button>
 
 
     </main>
 
     <script src="src/script.js"></script>
     <script src="src/snake.js"></script>
-
-
-<script>
-(function() {
-  const form = document.getElementById('contactForm');
-  const name = document.getElementById('name');
-  const email = document.getElementById('email');
-  const message = document.getElementById('message');
-  const nameError = document.getElementById('nameError');
-  const emailError = document.getElementById('emailError');
-  const messageError = document.getElementById('messageError');
-  const submitBtn = document.getElementById('submitBtn');
-
-  function validateEmail(v){
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
-  }
-
-  form.addEventListener('submit', function(e){
-    let valid = true;
-
-    // Validate Name
-    if (name.value.trim() === '') {
-      nameError.classList.remove('hidden');
-      valid = false;
-    } else {
-      nameError.classList.add('hidden');
-    }
-
-    // Validate Email
-    if (!validateEmail(email.value.trim())) {
-      emailError.classList.remove('hidden');
-      valid = false;
-    } else {
-      emailError.classList.add('hidden');
-    }
-
-    // Validate Message
-    if (message.value.trim() === '') {
-      messageError.classList.remove('hidden');
-      valid = false;
-    } else {
-      messageError.classList.add('hidden');
-    }
-
-    // Prevent form submission if any field is invalid
-    if (!valid) {
-      e.preventDefault();
-      return;
-    }
-
-    // Disable submit button to prevent multiple submissions
-    submitBtn.disabled = true;
-    submitBtn.classList.add('opacity-60', 'cursor-not-allowed');
-  });
-})();
-</script>
-
 
 
 </body>
