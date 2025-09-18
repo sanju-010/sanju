@@ -89,7 +89,7 @@ function setActiveLink() {
   let current = "";
 
   sections.forEach(section => {
-    const sectionTop = section.offsetTop - 100; // offset for header height
+    const sectionTop = section.offsetTop - 200; // offset for header height
     if (window.scrollY >= sectionTop) {
       current = section.getAttribute("id");
     }
