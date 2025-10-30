@@ -199,3 +199,46 @@ window.addEventListener("scroll", () => {
 goTopBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+
+// load more script
+const projectCards = document.querySelectorAll('.project-card');
+  const showMoreBtn = document.getElementById('showMoreBtn');
+
+  let visibleCount = window.innerWidth >= 1024 ? 3 : 4; // desktop: 3, mobile: 4
+
+  // Initially show only visibleCount
+  projectCards.forEach((card, i) => {
+    card.style.display = i < visibleCount ? 'flex' : 'none';
+  });
+
+  function showMore() {
+    const batchSize = window.innerWidth >= 1024 ? 3 : 4;
+    const hiddenCards = Array.from(projectCards).filter(c => c.style.display === 'none');
+
+    hiddenCards.slice(0, batchSize).forEach(card => {
+      card.style.display = 'flex';
+      card.classList.add('animate-fadeUp'); // Add animation
+      // Remove class after animation ends to allow reuse on next batch
+      card.addEventListener('animationend', () => card.classList.remove('animate-fadeUp'), { once: true });
+    });
+
+    // Hide button when all shown
+    if (Array.from(projectCards).every(c => c.style.display !== 'none')) {
+      showMoreBtn.style.display = 'none';
+    }
+  }
+
+  showMoreBtn.addEventListener('click', showMore);
+
+  // Reset on resize (optional)
+  window.addEventListener('resize', () => {
+    const newBatch = window.innerWidth >= 1024 ? 3 : 4;
+    if (newBatch !== visibleCount) {
+      visibleCount = newBatch;
+      projectCards.forEach((card, i) => {
+        card.style.display = i < visibleCount ? 'flex' : 'none';
+      });
+      showMoreBtn.style.display = 'block';
+    }
+  });
