@@ -368,6 +368,19 @@
                                     Postman
                                 </span>
                             </div>
+                            <!-- MySQL Workbench -->
+                            <div
+                                class="relative flex items-center h-12 px-4 py-2 overflow-hidden bg-white border border-black rounded-md shadow-[3px_3px_0_0_black] group hover:cursor-pointer">
+                                <div
+                                    class="absolute w-full h-full transition-all duration-300 right-full top-full bg-cyan-600 group-hover:right-0 group-hover:top-0">
+                                </div>
+                                <span
+                                    class="relative flex items-center gap-2 font-semibold transition-all duration-300 group-hover:text-white">
+                                    <i class="fas fa-database text-xl text-cyan-500 group-hover:text-black"></i>
+                                    MySQL Workbench
+                                </span>
+                            </div>
+
 
                         </div>
                     </div>
@@ -400,19 +413,6 @@
                                 <span
                                     class="relative flex items-center gap-2 font-semibold transition-all duration-300">
                                     <i class="fab fa-angular text-xl text-red-600 group-hover:text-black"></i> Angular
-                                </span>
-                            </div>
-
-                            <!-- WordPress -->
-                            <div
-                                class="relative flex items-center h-12 px-4 py-2 overflow-hidden bg-white border border-black rounded-md shadow-[3px_3px_0_0_black] group hover:cursor-pointer">
-                                <div
-                                    class="absolute w-full h-full transition-all duration-300 right-full top-full bg-blue-500 group-hover:right-0 group-hover:top-0">
-                                </div>
-                                <span
-                                    class="relative flex items-center gap-2 font-semibold transition-all duration-300">
-                                    <i class="fab fa-wordpress text-xl text-blue-600 group-hover:text-black"></i>
-                                    WordPress
                                 </span>
                             </div>
 
@@ -514,16 +514,16 @@
                                 </span>
                             </div>
 
-                            <!-- Elementor -->
+                            <!-- WordPress -->
                             <div
                                 class="relative flex items-center h-12 px-4 py-2 overflow-hidden bg-white border border-black rounded-md shadow-[3px_3px_0_0_black] group hover:cursor-pointer">
                                 <div
-                                    class="absolute w-full h-full transition-all duration-300 right-full top-full bg-pink-500 group-hover:right-0 group-hover:top-0">
+                                    class="absolute w-full h-full transition-all duration-300 right-full top-full bg-blue-500 group-hover:right-0 group-hover:top-0">
                                 </div>
                                 <span
                                     class="relative flex items-center gap-2 font-semibold transition-all duration-300">
-                                    <i class="fab fa-elementor text-xl text-pink-600 group-hover:text-black"></i>
-                                    Elementor
+                                    <i class="fab fa-wordpress text-xl text-blue-600 group-hover:text-black"></i>
+                                    WordPress
                                 </span>
                             </div>
 
@@ -544,95 +544,209 @@
                     </h2>
                     <!-- <p class="text-gray-600">Technologies I use regularly</p> -->
                 </div>
-                <div class="grid lg:grid-cols-3 grid-cols-2 gap-4" id="projectGrid">
+                <div class="grid lg:grid-cols-3 grid-cols-2 gap-4 relative" id="projectGrid">
+                    <!-- #region project-one -->
                     <!-- project cards -->
-                    <div
-                        class="project-card relative flex flex-col gap-4 items-center px-4 py-2 overflow-hidden bg-white border border-black rounded-md shadow-[3px_3px_0_0_black] group hover:cursor-pointer">
+                    <div id="projectCard-1"
+                        class="project-card relative flex flex-col lg:gap-4 gap-1 items-center lg:p-4 p-2 overflow-hidden bg-white border border-black rounded-md shadow-[3px_3px_0_0_black] group hover:cursor-pointer">
                         <!-- animated bg layer -->
                         <div
                             class="absolute w-full h-full transition-all duration-300 right-full top-full bg-amber-400 group-hover:right-0 group-hover:top-0">
-                        </div> <!-- content --> <img class="z-10" src="images/bg_avatar.webp" alt=""> <span
+                        </div>
+                        <!-- content -->
+                        <img class="z-10 h-11/12 object-cover rounded-md" src="images/Projects/Keshtra-login.png"
+                            alt="kshetra">
+                        <span
                             class="relative flex items-center gap-2 font-semibold transition-all duration-300 group-hover:text-white">
-                            project 1 </span>
+                            Kshetra Online </span>
                     </div>
-                    <div
-                        class="project-card relative flex flex-col gap-4 items-center px-4 py-2 overflow-hidden bg-white border border-black rounded-md shadow-[3px_3px_0_0_black] group hover:cursor-pointer">
+
+                    <div id="modalBox-1"
+                        class="hidden flex flex-col lg:flex-row z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute lg:w-10/12 w-full gap-4 items-center p-4 overflow-hidden bg-white border border-black rounded-md shadow-[3px_3px_0_0_black]">
+                        <span id="closeModal-1"
+                            class="absolute right-2 top-2 z-20 p-2 bg-white border-black rounded-full shadow-[3px_3px_0_0_black]">
+                            <img class="max-w-3.5 max-h-3.5" src="images/close.png" alt="close">
+                        </span>
+                        <img class="z-10 object-cover rounded-md w-full lg:w-4/12"
+                            src="images/Projects/Keshtra-login.png" alt="Kshetra-Android">
+
+                        <p class="w-full lg:w-8/12 md:text-2xl text-xs text-justify leading-relaxed">
+                            Kshetra Android is a smart temple-management POS system built to make temple operations
+                            faster, organized, and more accessible to devotees. It supports six languages and offers
+                            seamless modules such as Vazhipadu Booking, Advance Booking, Donations, and E-Bhandaram for
+                            digital contributions. Designed for Android POS devices and KIOSKs, it delivers a smooth and
+                            user-friendly experience for temple staff and visitors.
+                            <br><br>
+                            Tech Used: .NET WEB API, Angular, MySQL, Git, Visual Studio, VS Code
+                        </p>
+                    </div>
+                    <!-- #endregion -->
+
+                    <!-- #region project-two -->
+                    <!-- project cards -->
+                    <div id="projectCard-2"
+                        class="project-card relative flex flex-col lg:gap-4 gap-1 items-center lg:p-4 p-2 overflow-hidden bg-white border border-black rounded-md shadow-[3px_3px_0_0_black] group hover:cursor-pointer">
                         <!-- animated bg layer -->
                         <div
                             class="absolute w-full h-full transition-all duration-300 right-full top-full bg-amber-400 group-hover:right-0 group-hover:top-0">
-                        </div> <!-- content --> <img class="z-10" src="images/bg_avatar.webp" alt=""> <span
+                        </div>
+                        <!-- content -->
+                        <img class="z-10 h-11/12 object-cover rounded-md" src="images/Projects/temple-website.png"
+                            alt="kshetra">
+                        <span
                             class="relative flex items-center gap-2 font-semibold transition-all duration-300 group-hover:text-white">
-                            project 1 </span>
+                            Pooja Booking </span>
                     </div>
-                    <div
-                        class="project-card relative flex flex-col gap-4 items-center px-4 py-2 overflow-hidden bg-white border border-black rounded-md shadow-[3px_3px_0_0_black] group hover:cursor-pointer">
+
+                    <div id="modalBox-2"
+                        class="hidden flex flex-col lg:flex-row z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute lg:w-10/12 w-full gap-4 items-center p-4 overflow-hidden bg-white border border-black rounded-md shadow-[3px_3px_0_0_black]">
+                        <span id="closeModal-2"
+                            class="absolute right-2 top-2 z-20 p-2 bg-white border-black rounded-full shadow-[3px_3px_0_0_black]">
+                            <img class="max-w-3.5 max-h-3.5" src="images/close.png" alt="close">
+                        </span>
+                        <img class="z-10 object-cover rounded-md w-full lg:w-4/12 border border-black"
+                            src="images/Projects/temple-website.png" alt="kshetra">
+
+                        <p class="w-full lg:w-8/12 md:text-2xl text-xs text-justify leading-relaxed">
+                            This Temple Pooja Booking Website is a complete digital solution created for individual
+                            temples to manage
+                            their online pooja offerings. Devotees can explore available rituals, pre-book poojas, make
+                            secure donations,
+                            and receive instant digital receipts. The platform ensures a smooth experience with clear
+                            navigation,
+                            multi-device support, and secure payment integration.
+                            <br><br>
+
+                            <span class="font-semibold">Core Modules:</span><br>
+                            • <b>Vazhipadu Booking</b> — Register pooja offerings at the counter or via self-service
+                            KIOSKs.<br>
+                            • <b>Advance Booking</b> — Allow devotees to pre-book rituals for preferred dates and
+                            special occasions.<br>
+                            • <b>Donations</b> — Manage temple donations, track contributions, and issue instant
+                            receipts.<br>
+                            • <b>E-Bhandaram</b> — Accept secure UPI/Card payments directly to the temple’s digital
+                            Bhandaram.
+                            <br><br>
+
+                            <span class="font-semibold">Tech Used:</span> .NET WEB API, Angular, MySQL, HTML, CSS, Git,
+                            Visual
+                            Studio, VS Code
+                        </p>
+                    </div>
+                    <!-- #endregion -->
+
+                    <!-- #region project-three -->
+                    <!-- project cards -->
+                    <div id="projectCard-3"
+                        class="project-card relative flex flex-col lg:gap-4 gap-1 items-center lg:p-4 p-2 overflow-hidden bg-white border border-black rounded-md shadow-[3px_3px_0_0_black] group hover:cursor-pointer">
                         <!-- animated bg layer -->
                         <div
                             class="absolute w-full h-full transition-all duration-300 right-full top-full bg-amber-400 group-hover:right-0 group-hover:top-0">
-                        </div> <!-- content --> <img class="z-10" src="images/bg_avatar.webp" alt=""> <span
+                        </div>
+                        <!-- content -->
+                        <img class="z-10 h-11/12 object-cover rounded-md" src="images/Projects/Keshtra-offline.png"
+                            alt="kshetra">
+                        <span
                             class="relative flex items-center gap-2 font-semibold transition-all duration-300 group-hover:text-white">
-                            project 1 </span>
+                            Keshtra Temple </span>
                     </div>
-                    <div
-                        class="project-card relative flex flex-col gap-4 items-center px-4 py-2 overflow-hidden bg-white border border-black rounded-md shadow-[3px_3px_0_0_black] group hover:cursor-pointer">
+
+                    <div id="modalBox-3"
+                        class="hidden flex flex-col lg:flex-row z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute lg:w-10/12 w-full gap-4 items-center p-4 overflow-hidden bg-white border border-black rounded-md shadow-[3px_3px_0_0_black]">
+                        <span id="closeModal-3"
+                            class="absolute right-2 top-2 z-20 p-2 bg-white border-black rounded-full shadow-[3px_3px_0_0_black]">
+                            <img class="max-w-3.5 max-h-3.5" src="images/close.png" alt="close">
+                        </span>
+                        <img class="z-10 object-cover rounded-md w-full lg:w-4/12"
+                            src="images/Projects/Keshtra-offline.png" alt="kshetra">
+
+                        <p class="w-full lg:w-8/12 md:text-2xl text-xs text-justify leading-relaxed">
+                            The Offline Kshetra System is a robust temple-management solution designed for daily on-site
+                            operations,
+                            especially in environments without stable internet connectivity. Built using .NET WebForms
+                            as a desktop-style
+                            application and powered by MySQL, it enables temple staff to handle all core activities
+                            smoothly and reliably.
+
+                            <br><br>
+                            With fast response times and an easy-to-use interface, the system supports live Vazhipadu
+                            entry,
+                            instant receipt generation, counter-based pooja registrations, and secure data storage.
+                            Developed to work
+                            entirely offline, it ensures uninterrupted service even during network downtime while
+                            synchronizing with
+                            the online system whenever connectivity is available.
+
+                            <br>
+                            <br>
+                            <span class="font-semibold">Tech Used:</span> .NET WebForms, MySQL, Git, Visual Studio
+                        </p>
+                    </div>
+                    <!-- #endregion -->
+
+                    <!-- #region project-four -->
+                    <!-- project cards -->
+                    <div id="projectCard-4"
+                        class="project-card relative flex flex-col lg:gap-4 gap-1 items-center lg:p-4 p-2 overflow-hidden bg-white border border-black rounded-md shadow-[3px_3px_0_0_black] group hover:cursor-pointer">
                         <!-- animated bg layer -->
                         <div
                             class="absolute w-full h-full transition-all duration-300 right-full top-full bg-amber-400 group-hover:right-0 group-hover:top-0">
-                        </div> <!-- content --> <img class="z-10" src="images/bg_avatar.webp" alt=""> <span
+                        </div>
+                        <!-- content -->
+                        <img class="z-10 h-11/12 object-cover rounded-md" src="images/Projects/movie-1.png"
+                            alt="kshetra">
+                        <span
                             class="relative flex items-center gap-2 font-semibold transition-all duration-300 group-hover:text-white">
-                            project 1 </span>
+                            MovieZone </span>
                     </div>
-                    <div
-                        class="project-card relative flex flex-col gap-4 items-center px-4 py-2 overflow-hidden bg-white border border-black rounded-md shadow-[3px_3px_0_0_black] group hover:cursor-pointer">
-                        <!-- animated bg layer -->
-                        <div
-                            class="absolute w-full h-full transition-all duration-300 right-full top-full bg-amber-400 group-hover:right-0 group-hover:top-0">
-                        </div> <!-- content --> <img class="z-10" src="images/bg_avatar.webp" alt=""> <span
-                            class="relative flex items-center gap-2 font-semibold transition-all duration-300 group-hover:text-white">
-                            project 1 </span>
+
+                    <div id="modalBox-4"
+                        class="hidden flex flex-col lg:flex-row z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute lg:w-10/12 w-full gap-4 items-center p-4 overflow-hidden bg-white border border-black rounded-md shadow-[3px_3px_0_0_black]">
+                        <span id="closeModal-4"
+                            class="absolute right-2 top-2 z-20 p-2 bg-white border-black rounded-full shadow-[3px_3px_0_0_black]">
+                            <img class="max-w-3.5 max-h-3.5" src="images/close.png" alt="close">
+                        </span>
+                        <img class="z-10 object-cover rounded-md w-full lg:w-4/12"
+                            src="images/Projects/movie-2.png" alt="kshetra">
+
+                        <p class="w-full lg:w-8/12 md:text-2xl text-xs text-justify leading-relaxed">
+                            Movie Explorer is a modern, responsive movie-discovery platform built with Angular and
+                            styled using Tailwind CSS.
+                            The website allows users to explore upcoming movie releases, view detailed movie
+                            information, and search for films
+                            using a third-party movie API for real-time data.
+
+                            <br><br>
+                            The app includes language-based filtering, dynamic search suggestions, and a clean UI
+                            optimized for smooth
+                            performance. With a fast and intuitive browsing experience, users can easily navigate
+                            through posters, cast details,
+                            and movie descriptions.
+
+                            <br><br>
+                            <span class="font-semibold">Key Features:</span><br>
+                            • <b>Upcoming Movies</b> — See all upcoming theatre releases.<br>
+                            • <b>Movie Search</b> — Real-time search powered by an external movie API.<br>
+                            • <b>Language Filter</b> — Filter movies by preferred languages.<br>
+                            • <b>Responsive UI</b> — Tailwind CSS-styled interface for clean layout and fast
+                            performance.<br>
+
+                            <br>
+                            <span class="font-semibold">Tech Used:</span> Angular, Tailwind CSS, TypeScript, HTML,
+                            Third-party REST API, Git, VS Code
+                        </p>
                     </div>
-                    <div
-                        class="project-card relative flex flex-col gap-4 items-center px-4 py-2 overflow-hidden bg-white border border-black rounded-md shadow-[3px_3px_0_0_black] group hover:cursor-pointer">
-                        <!-- animated bg layer -->
-                        <div
-                            class="absolute w-full h-full transition-all duration-300 right-full top-full bg-amber-400 group-hover:right-0 group-hover:top-0">
-                        </div> <!-- content --> <img class="z-10" src="images/bg_avatar.webp" alt=""> <span
-                            class="relative flex items-center gap-2 font-semibold transition-all duration-300 group-hover:text-white">
-                            project 1 </span>
-                    </div>
-                    <div
-                        class="project-card relative flex flex-col gap-4 items-center px-4 py-2 overflow-hidden bg-white border border-black rounded-md shadow-[3px_3px_0_0_black] group hover:cursor-pointer">
-                        <!-- animated bg layer -->
-                        <div
-                            class="absolute w-full h-full transition-all duration-300 right-full top-full bg-amber-400 group-hover:right-0 group-hover:top-0">
-                        </div> <!-- content --> <img class="z-10" src="images/bg_avatar.webp" alt=""> <span
-                            class="relative flex items-center gap-2 font-semibold transition-all duration-300 group-hover:text-white">
-                            project 1 </span>
-                    </div>
-                    <div
-                        class="project-card relative flex flex-col gap-4 items-center px-4 py-2 overflow-hidden bg-white border border-black rounded-md shadow-[3px_3px_0_0_black] group hover:cursor-pointer">
-                        <!-- animated bg layer -->
-                        <div
-                            class="absolute w-full h-full transition-all duration-300 right-full top-full bg-amber-400 group-hover:right-0 group-hover:top-0">
-                        </div> <!-- content --> <img class="z-10" src="images/bg_avatar.webp" alt=""> <span
-                            class="relative flex items-center gap-2 font-semibold transition-all duration-300 group-hover:text-white">
-                            project 1 </span>
-                    </div>
-                    <div
-                        class="project-card relative flex flex-col gap-4 items-center px-4 py-2 overflow-hidden bg-white border border-black rounded-md shadow-[3px_3px_0_0_black] group hover:cursor-pointer">
-                        <!-- animated bg layer -->
-                        <div
-                            class="absolute w-full h-full transition-all duration-300 right-full top-full bg-amber-400 group-hover:right-0 group-hover:top-0">
-                        </div> <!-- content --> <img class="z-10" src="images/bg_avatar.webp" alt=""> <span
-                            class="relative flex items-center gap-2 font-semibold transition-all duration-300 group-hover:text-white">
-                            project 1 </span>
-                    </div>
+                    <!-- #endregion -->
+
+                    <!-- **************** -->
+
+
                 </div>
 
                 <!-- Show More Button -->
-                <div class="flex justify-center mt-6">
+                <div class="hidden flex justify-center mt-6">
                     <button id="showMoreBtn"
-                        class="px-4 py-2 bg-amber-400 border border-black rounded-md shadow-[3px_3px_0_0_black] font-semibold hover:bg-amber-500 transition">
+                        class="px-4 py-2 bg-amber-400 border border-black rounded-md shadow-[3px_3px_0_0_black] font-semibold hover:bg-amber-500 transition hover:cursor-pointer">
                         Show More
                     </button>
                 </div>

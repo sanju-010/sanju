@@ -203,42 +203,109 @@ goTopBtn.addEventListener("click", () => {
 
 // load more script
 const projectCards = document.querySelectorAll('.project-card');
-  const showMoreBtn = document.getElementById('showMoreBtn');
+const showMoreBtn = document.getElementById('showMoreBtn');
 
-  let visibleCount = window.innerWidth >= 1024 ? 3 : 4; // desktop: 3, mobile: 4
+let visibleCount = window.innerWidth >= 1024 ? 3 : 4; // desktop: 3, mobile: 4
 
-  // Initially show only visibleCount
-  projectCards.forEach((card, i) => {
-    card.style.display = i < visibleCount ? 'flex' : 'none';
+// Initially show only visibleCount
+projectCards.forEach((card, i) => {
+  card.style.display = i < visibleCount ? 'flex' : 'none';
+});
+
+function showMore() {
+  const batchSize = window.innerWidth >= 1024 ? 3 : 4;
+  const hiddenCards = Array.from(projectCards).filter(c => c.style.display === 'none');
+
+  hiddenCards.slice(0, batchSize).forEach(card => {
+    card.style.display = 'flex';
+    card.classList.add('animate-fadeUp'); // Add animation
+    // Remove class after animation ends to allow reuse on next batch
+    card.addEventListener('animationend', () => card.classList.remove('animate-fadeUp'), { once: true });
   });
 
-  function showMore() {
-    const batchSize = window.innerWidth >= 1024 ? 3 : 4;
-    const hiddenCards = Array.from(projectCards).filter(c => c.style.display === 'none');
-
-    hiddenCards.slice(0, batchSize).forEach(card => {
-      card.style.display = 'flex';
-      card.classList.add('animate-fadeUp'); // Add animation
-      // Remove class after animation ends to allow reuse on next batch
-      card.addEventListener('animationend', () => card.classList.remove('animate-fadeUp'), { once: true });
-    });
-
-    // Hide button when all shown
-    if (Array.from(projectCards).every(c => c.style.display !== 'none')) {
-      showMoreBtn.style.display = 'none';
-    }
+  // Hide button when all shown
+  if (Array.from(projectCards).every(c => c.style.display !== 'none')) {
+    showMoreBtn.style.display = 'none';
   }
+}
 
-  showMoreBtn.addEventListener('click', showMore);
+showMoreBtn.addEventListener('click', showMore);
 
-  // Reset on resize (optional)
-  window.addEventListener('resize', () => {
-    const newBatch = window.innerWidth >= 1024 ? 3 : 4;
-    if (newBatch !== visibleCount) {
-      visibleCount = newBatch;
-      projectCards.forEach((card, i) => {
-        card.style.display = i < visibleCount ? 'flex' : 'none';
-      });
-      showMoreBtn.style.display = 'block';
-    }
-  });
+// Reset on resize (optional)
+window.addEventListener('resize', () => {
+  const newBatch = window.innerWidth >= 1024 ? 3 : 4;
+  if (newBatch !== visibleCount) {
+    visibleCount = newBatch;
+    projectCards.forEach((card, i) => {
+      card.style.display = i < visibleCount ? 'flex' : 'none';
+    });
+    showMoreBtn.style.display = 'block';
+  }
+});
+
+
+
+// my project section
+const projectCard_1 = document.getElementById("projectCard-1");
+const projectCard_2 = document.getElementById("projectCard-2");
+const projectCard_3 = document.getElementById("projectCard-3");
+const projectCard_4 = document.getElementById("projectCard-4");
+const modalBox_1 = document.getElementById("modalBox-1");
+const modalBox_2 = document.getElementById("modalBox-2");
+const modalBox_3 = document.getElementById("modalBox-3");
+const modalBox_4 = document.getElementById("modalBox-4");
+const closeModal_1 = document.getElementById("closeModal-1");
+const closeModal_2 = document.getElementById("closeModal-2");
+const closeModal_3 = document.getElementById("closeModal-3");
+const closeModal_4 = document.getElementById("closeModal-4");
+
+
+// Show modal when card is clicked
+projectCard_1.addEventListener("click", () => {
+  modalBox_1.classList.remove("hidden");
+});
+projectCard_2.addEventListener("click", () => {
+  modalBox_2.classList.remove("hidden");
+});
+projectCard_3.addEventListener("click", () => {
+  modalBox_3.classList.remove("hidden");
+});
+projectCard_4.addEventListener("click", () => {
+  modalBox_4.classList.remove("hidden");
+});
+
+// Hide modal when clicking outside modal
+document.addEventListener("click", (e) => {
+  if (!modalBox_1.contains(e.target) && !projectCard_1.contains(e.target)) {
+    modalBox_1.classList.add("hidden");
+  }
+});
+document.addEventListener("click", (e) => {
+  if (!modalBox_2.contains(e.target) && !projectCard_2.contains(e.target)) {
+    modalBox_2.classList.add("hidden");
+  }
+});
+document.addEventListener("click", (e) => {
+  if (!modalBox_3.contains(e.target) && !projectCard_3.contains(e.target)) {
+    modalBox_3.classList.add("hidden");
+  }
+});
+document.addEventListener("click", (e) => {
+  if (!modalBox_4.contains(e.target) && !projectCard_4.contains(e.target)) {
+    modalBox_4.classList.add("hidden");
+  }
+});
+
+// Hide modal when clicking the close icon
+closeModal_1.addEventListener("click", () => {
+  modalBox_1.classList.add("hidden");
+});
+closeModal_2.addEventListener("click", () => {
+  modalBox_2.classList.add("hidden");
+});
+closeModal_3.addEventListener("click", () => {
+  modalBox_3.classList.add("hidden");
+});
+closeModal_4.addEventListener("click", () => {
+  modalBox_4.classList.add("hidden");
+});
